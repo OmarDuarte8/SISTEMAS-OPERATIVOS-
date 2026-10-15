@@ -77,28 +77,44 @@ Al ejecutar procesos controlados con `nice`:
 ## 📸 Evidencias descritas
 
 ![Sesión y Uptime](evidencias/sesionuptime.png)
-*Figura 1: Verificación de sesión de usuario (`whoami`), terminal asociada (`tty`), shell activo (`SHELL`) y tiempo encendido del equipo junto a la carga promedio (`uptime`).*
+
+
+Figura 1: Verificación de sesión de usuario (`whoami`), terminal asociada (`tty`), shell activo (`SHELL`) y tiempo encendido del equipo junto a la carga promedio (`uptime`).
 
 ![Consulta ps y ps aux](evidencias/psaux.png)
-*Figura 2: Consulta inicial de procesos de la terminal actual con `ps` y primera sección del listado general de procesos del sistema con `ps aux` mostrando PID 1 (`systemd`).*
+
+
+Figura 2: Consulta inicial de procesos de la terminal actual con `ps` y primera sección del listado general de procesos del sistema con `ps aux` mostrando PID 1 (`systemd`).
 
 ![Observación con top](evidencias/top.png)
-*Figura 3: Monitoreo dinámico en tiempo real con `top`, mostrando el uso global de CPU (98.6% idle), consumo de memoria RAM y la tabla ordenada de procesos activos.*
+
+
+Figura 3: Monitoreo dinámico en tiempo real con `top`, mostrando el uso global de CPU (98.6% idle), consumo de memoria RAM y la tabla ordenada de procesos activos.
 
 ![Procesos y listados auxiliares](evidencias/psaux2.png)
-*Figura 4: Continuación del listado `ps aux` mostrando subprocesos del kernel como controladores de hilos de interrupción (`ksoftirqd`), tareas de migración y monitoreo de CPU.*
+
+
+Figura 4: Continuación del listado `ps aux` mostrando subprocesos del kernel como controladores de hilos de interrupción (`ksoftirqd`), tareas de migración y monitoreo de CPU.
 
 ![Procesos del sistema](evidencias/psaux3.png)
-*Figura 5: Vista de procesos de segundo plano del sistema, incluyendo demonios de journaling (`systemd-journald`), resolución de red (`systemd-resolved`) y gestores de dispositivos.*
+
+
+Figura 5: Vista de procesos de segundo plano del sistema, incluyendo demonios de journaling (`systemd-journald`), resolución de red (`systemd-resolved`) y gestores de dispositivos.
 
 ![Procesos y servicios activos](evidencias/psaux4.png)
-*Figura 6: Listado de servicios del sistema e infraestructura gráfica, incluyendo `snapd`, `NetworkManager`, servidor de bases de datos `mariadb` y procesos de la sesión de usuario.*
+
+
+Figura 6: Listado de servicios del sistema e infraestructura gráfica, incluyendo `snapd`, `NetworkManager`, servidor de bases de datos `mariadb` y procesos de la sesión de usuario.
 
 ![Procesos de usuario](evidencias/psaux5.png)
-*Figura 7: Detalle de procesos pertenecientes al entorno de escritorio del usuario `omar8`, incluyendo el compositor gráfico `gnome-shell`, extensiones y servicios de segundo plano.*
+
+
+Figura 7: Detalle de procesos pertenecientes al entorno de escritorio del usuario `omar8`, incluyendo el compositor gráfico `gnome-shell`, extensiones y servicios de segundo plano.
 
 ![Procesos en ejecución final](evidencias/psaux6.png)
-*Figura 8: Parte final del listado `ps aux`, donde se identifican procesos del navegador `firefox`, la shell interactiva `bash` (PID 12722) y el proceso final de la propia consulta `ps aux` (PID 13782).*
+
+
+Figura 8: Parte final del listado `ps aux`, donde se identifican procesos del navegador `firefox`, la shell interactiva `bash` (PID 12722) y el proceso final de la propia consulta `ps aux` (PID 13782).
 ---
 
 ## 9. 💡 Conclusión técnica
