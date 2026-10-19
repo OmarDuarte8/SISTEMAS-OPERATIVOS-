@@ -135,47 +135,47 @@ El sistema de archivos virtual `/proc` expuso los datos internos del kernel:
 
 ## 📸 Evidencias descritas
 
-![Medición inicial de uptime](evidencias/uptime.png)
+![Medición inicial de uptime](img/uptime.png)
 
 
 Figura 1: Medición inicial de los recursos globales del sistema utilizando `free -h` (mostrando 14Gi de RAM total y 11Gi disponibles), el tiempo encendido y carga promedio con `uptime`, y el número de CPU lógicas con `nproc` (12 núcleos).
 
-![Información de meminfo](evidencias/meminfo.png)
+![Información de meminfo](img/meminfo.png)
 
 
 Figura 2: Consulta detallada de las primeras líneas del archivo del kernel `/proc/meminfo`, mostrando en kilobytes los valores brutos de memoria total (`MemTotal`), libre (`MemFree`), disponible (`MemAvailable`) y swap.
 
-![Estadísticas con vmstats](evidencias/vmstats.png)
+![Estadísticas con vmstats](img/vmstats.png)
 
 
 Figura 3: Monitoreo estadístico del sistema ejecutando `vmstat 1 5`, donde se observa la inactividad de la swap (`si`/`so` en 0) y un porcentaje alto de CPU inactiva (`id` entre 92% y 99%).
 
-![Procesos ordenados por memoria](evidencias/procesosmemoria.png)
+![Procesos ordenados por memoria](img/procesosmemoria.png)
 
 
 Figura 4: Listado de procesos ordenados descendentemente por su porcentaje de consumo de memoria RAM con `ps aux --sort=-%mem`, destacando el proceso principal de Firefox con 4.6% de MEM.
 
-![Procesos ordenados por CPU](evidencias/procesosmemoria.png)
+![Procesos ordenados por CPU](img/procesosmemoria.png)
 
 
 Figura 5: Listado de procesos ordenados descendentemente por su porcentaje de uso de CPU con `ps aux --sort=-%cpu`, mostrando el pico transitorio de la consulta y la actividad del navegador.
 
-![Comparación antes](evidencias/comparacionantes.png)
+![Comparación antes](img/comparacionantes.png)
 
 
 Figura 6: Registro de la línea base ("Antes") con fecha, comandos `free -h` y muestreo de `vmstat` previo a la ejecución de la prueba controlada.
 
-![Comparación durante](evidencias/comparaciondurante.png)
+![Comparación durante](img/comparaciondurante.png)
 
 
 Figura 7: Medición "Durante" la ejecución del proceso de prueba en segundo plano, comprobando con `ps -C sleep` que el PID activo se encontraba en estado de espera (`S`) consumiendo 0% de recursos.
 
-![Comparación después](evidencias/comparaciondespues.png)
+![Comparación después](img/comparaciondespues.png)
 
 
 Figura 8: Verificación "Después" de finalizar el proceso, consultando el estado de la RAM, la carga del sistema y confirmando con `pgrep` la persistencia o cierre del proceso.
 
-![Estado del PID en proc](evidencias/pidstatus.png)
+![Estado del PID en proc](img/pidstatus.png)
 
 
 Figura 9: Auditoría interna del archivo `/proc/PID/status` filtrando los campos de la shell interactiva `bash`, mostrando su estado `sleeping`, tamaño de memoria virtual (`VmSize`) y residente (`VmRSS`).
